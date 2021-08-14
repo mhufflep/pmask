@@ -23,9 +23,9 @@ export default class pmask {
         this.mask = mask;
         this.x = x;
         this.fill = fill;
-	}
+    }
 	
-	default() {
+    default() {
         return {
             separators: ['(', ')', '-'],
             mask: 'x-(xxx)-xxx-xx-xx',
@@ -95,12 +95,12 @@ export default class pmask {
                 if (i < number.length) {
                     res += number[i];
                     i++;    
-				}
-				else if (this.fill) {
+		}
+		else if (this.fill) {
                     res += this.x;
                 } 
 				
-				if (!this.fill && i === number.length ){
+		if (!this.fill && i === number.length ) {
                     return res;
                 }
             }
