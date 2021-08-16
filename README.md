@@ -38,9 +38,15 @@ import pmask from './pmask'
 ```
 or there is also `pmask-node.js` provided for **Node.js**
 
-``` javascript
-const pmask = require('./pmask-node')
+```javascript
+const pmask = require('./pmask-node');
 
+const pm = new pmask();
+
+pm.separators = ['-', '(', ')'];
+pm.mask = 'x-(xxx)-xxx-xxxx';
+pm.fill = false;
+
+console.log(pm.get("1234")); //1-(234
 ```
-
-Look inside `test.js` file to see some examples.
+Look inside `test.js` file to see more examples.
